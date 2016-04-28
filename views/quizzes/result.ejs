@@ -8,10 +8,10 @@
 	<body>
 		<h2>Quiz: el juego que lo está petando entre la chavalada más fresca</h2>
 		<p>
-			La respuesta es <%= result %>.
+			La respuesta <strong> <%= answer %> </strong> es <%= result %>.
 		</p>
 		<p>
-			<a href="question"> Inténtalo otra vez </a>
+			<a href="question?answer=<%= answer %>"> Inténtalo otra vez </a>
 		</p>
 	</body>
 </html>
