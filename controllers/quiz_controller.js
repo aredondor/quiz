@@ -1,5 +1,6 @@
 
 var models = require('../models');
+var Sequelize = require('sequelize');
 
 exports.load = function(req, res, next, quizId) {
 models.Quiz.findById(quizId)
@@ -86,12 +87,18 @@ answer: req.body.quiz.answer} );
 // guarda en DB los campos pregunta y respuesta de quiz
 quiz.save({fields: ["question", "answer"]})
 .then(function(quiz) {
-	req.flash('success', 'Quiz creado con éxito');
-	res.redirect('/quizzes'); // res.redirect: Redirección HTTP a lista de preguntas
+req.flash('success', 'Quiz creado con éxito.');
+res.redirect('/quizzes'); // res.redirect: Redirección HTTP a lista de preguntas
+})
+.catch(Sequelize.ValidationError, function(error) {
+req.flash('error', 'Errores en el formulario:');
+for (var i in error.errors) {
+req.flash('error', error.errors[i].value);
+};
+res.render('quizzes/new', {quiz: quiz});
 })
 .catch(function(error) {
-	req.flas('error', 'Error al crear un Quiz: '+error.message);
-	next(error);
+req.flash('error', 'Error al crear un Quiz: '+error.message);
+next(error);
 });
 };
-
