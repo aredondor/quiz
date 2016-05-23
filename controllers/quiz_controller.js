@@ -86,10 +86,12 @@ answer: req.body.quiz.answer} );
 // guarda en DB los campos pregunta y respuesta de quiz
 quiz.save({fields: ["question", "answer"]})
 .then(function(quiz) {
-res.redirect('/quizzes'); // res.redirect: Redirección HTTP a lista de preguntas
+	req.flash('success', 'Quiz creado con éxito');
+	res.redirect('/quizzes'); // res.redirect: Redirección HTTP a lista de preguntas
 })
 .catch(function(error) {
-next(error);
+	req.flas('error', 'Error al crear un Quiz: '+error.message);
+	next(error);
 });
 };
 
