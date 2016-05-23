@@ -17,7 +17,10 @@ Buscar preguntas:
 <% for (var i in quizzes) { %>
 <tr>
 <td>
-<a href="/quizzes/<%= quizzes[i].id %>"><%= quizzes[i].question %></a>
+	<a href="/quizzes/<%= quizzes[i].id %>"><%= quizzes[i].question %></a>
+</td>
+<td>
+	<a href="/quizzes/<%= quizzes[i].id %>/edit"><button>Editar</button></a>
 </td>
 </tr>
 <% } %>
