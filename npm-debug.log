@@ -1,224 +1,37 @@
-info it worked if it ends with ok
-verbose cli [ 'node', '/usr/bin/npm', 'install' ]
-info using npm@1.1.4
-info using node@v0.6.12
-verbose config file /home/andres/.npmrc
-verbose config file /usr/etc/npmrc
-verbose config file /usr/share/npm/npmrc
-verbose caching /home/andres/Documentos/proy_quiz/quiz/package.json
-verbose loadDefaults quiz@0.0.0
-verbose readDependencies: using package.json deps
-verbose where, deps [ '/home/andres/Documentos/proy_quiz/quiz',
-verbose where, deps   [ 'body-parser',
-verbose where, deps     'cookie-parser',
-verbose where, deps     'debug',
-verbose where, deps     'ejs',
-verbose where, deps     'express',
-verbose where, deps     'express-partials',
-verbose where, deps     'morgan',
-verbose where, deps     'serve-favicon' ] ]
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/package.json
-info preinstall quiz@0.0.0
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/accepts/package.json
-verbose loadDefaults accepts@1.2.13
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/parseurl/package.json
-verbose loadDefaults parseurl@1.3.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/content-type/package.json
-verbose loadDefaults content-type@1.0.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/merge-descriptors/package.json
-verbose loadDefaults merge-descriptors@1.0.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/path-to-regexp/package.json
-verbose loadDefaults path-to-regexp@0.1.7
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/array-flatten/package.json
-verbose loadDefaults array-flatten@1.1.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/mime-db/package.json
-verbose loadDefaults mime-db@1.22.0
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/morgan/package.json
-verbose loadDefaults morgan@1.6.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/raw-body/package.json
-verbose loadDefaults raw-body@2.1.6
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/cookie-parser/package.json
-verbose loadDefaults cookie-parser@1.3.5
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/debug/package.json
-verbose loadDefaults debug@2.2.0
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/ejs/package.json
-verbose loadDefaults ejs@2.3.4
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/qs/package.json
-verbose loadDefaults qs@4.0.0
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/body-parser/package.json
-verbose loadDefaults body-parser@1.13.3
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/statuses/package.json
-verbose loadDefaults statuses@1.2.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/basic-auth/package.json
-verbose loadDefaults basic-auth@1.0.3
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/bytes/package.json
-verbose loadDefaults bytes@2.1.0
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/ms/package.json
-verbose loadDefaults ms@0.7.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/cookie-signature/package.json
-verbose loadDefaults cookie-signature@1.0.6
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/etag/package.json
-verbose loadDefaults etag@1.7.0
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/express/package.json
-verbose loadDefaults express@4.13.4
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/depd/package.json
-verbose loadDefaults depd@1.0.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/type-is/package.json
-verbose loadDefaults type-is@1.6.12
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/utils-merge/package.json
-verbose loadDefaults utils-merge@1.0.0
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/fresh/package.json
-verbose loadDefaults fresh@0.3.0
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/media-typer/package.json
-verbose loadDefaults media-typer@0.3.0
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/escape-html/package.json
-verbose loadDefaults escape-html@1.0.3
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/destroy/package.json
-verbose loadDefaults destroy@1.0.4
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/serve-static/package.json
-verbose loadDefaults serve-static@1.10.2
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/inherits/package.json
-verbose loadDefaults inherits@2.0.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/http-errors/package.json
-verbose loadDefaults http-errors@1.3.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/ipaddr.js/package.json
-verbose loadDefaults ipaddr.js@1.0.5
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/serve-favicon/package.json
-verbose loadDefaults serve-favicon@2.3.0
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/unpipe/package.json
-verbose loadDefaults unpipe@1.0.0
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/cookie/package.json
-verbose loadDefaults cookie@0.1.3
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/on-headers/package.json
-verbose loadDefaults on-headers@1.0.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/iconv-lite/package.json
-verbose loadDefaults iconv-lite@0.4.11
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/content-disposition/package.json
-verbose loadDefaults content-disposition@0.5.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/range-parser/package.json
-verbose loadDefaults range-parser@1.0.3
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/methods/package.json
-verbose loadDefaults methods@1.1.2
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/negotiator/package.json
-verbose loadDefaults negotiator@0.5.3
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/send/package.json
-verbose loadDefaults send@0.13.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/finalhandler/package.json
-verbose loadDefaults finalhandler@0.4.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/vary/package.json
-verbose loadDefaults vary@1.0.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/ee-first/package.json
-verbose loadDefaults ee-first@1.1.1
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/mime/package.json
-verbose loadDefaults mime@1.3.4
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/forwarded/package.json
-verbose loadDefaults forwarded@0.1.0
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/express-partials/package.json
-verbose loadDefaults express-partials@0.3.0
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/on-finished/package.json
-verbose loadDefaults on-finished@2.3.0
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/proxy-addr/package.json
-verbose loadDefaults proxy-addr@1.0.10
-verbose caching /home/andres/Documentos/proy_quiz/quiz/node_modules/mime-types/package.json
-verbose loadDefaults mime-types@2.1.10
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/package.json
-verbose readDependencies: using package.json deps
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/accepts/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/parseurl/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/content-type/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/merge-descriptors/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/path-to-regexp/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/array-flatten/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/mime-db/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/morgan/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/raw-body/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/cookie-parser/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/debug/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/ejs/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/qs/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/body-parser/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/statuses/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/basic-auth/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/bytes/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/ms/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/cookie-signature/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/etag/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/express/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/depd/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/type-is/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/utils-merge/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/fresh/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/media-typer/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/escape-html/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/destroy/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/serve-static/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/inherits/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/http-errors/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/ipaddr.js/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/serve-favicon/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/unpipe/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/cookie/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/on-headers/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/iconv-lite/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/content-disposition/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/range-parser/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/methods/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/negotiator/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/send/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/finalhandler/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/vary/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/ee-first/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/mime/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/forwarded/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/express-partials/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/on-finished/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/proxy-addr/package.json
-verbose from cache /home/andres/Documentos/proy_quiz/quiz/node_modules/mime-types/package.json
-verbose already installed in /home/andres/Documentos/proy_quiz/quiz skipping cookie-parser@~1.3.5
-verbose already installed in /home/andres/Documentos/proy_quiz/quiz skipping debug@~2.2.0
-verbose already installed in /home/andres/Documentos/proy_quiz/quiz skipping ejs@~2.3.3
-verbose already installed in /home/andres/Documentos/proy_quiz/quiz skipping express@~4.13.1
-verbose cache add [ 'express-partials@^0.3.0', null ]
-silly cache add: name, spec, args [ undefined,
-silly cache add: name, spec, args   'express-partials@^0.3.0',
-silly cache add: name, spec, args   [ 'express-partials@^0.3.0', null ] ]
-verbose parsed url { pathname: 'express-partials@^0.3.0',
-verbose parsed url   path: 'express-partials@^0.3.0',
-verbose parsed url   href: 'express-partials@^0.3.0' }
-silly cache add: name, spec, args [ 'express-partials',
-silly cache add: name, spec, args   '^0.3.0',
-silly cache add: name, spec, args   [ 'express-partials', '^0.3.0' ] ]
-verbose parsed url { pathname: '^0.3.0', path: '^0.3.0', href: '^0.3.0' }
-verbose addNamed [ 'express-partials', '^0.3.0' ]
-verbose addNamed [ null, null ]
-info addNameTag [ 'express-partials', '^0.3.0' ]
-verbose already installed in /home/andres/Documentos/proy_quiz/quiz skipping morgan@~1.6.1
-verbose raw, before any munging express-partials
-verbose url resolving [ 'https://registry.npmjs.org/', './express-partials' ]
-verbose url resolved https://registry.npmjs.org/express-partials
-http GET https://registry.npmjs.org/express-partials
-verbose already installed in /home/andres/Documentos/proy_quiz/quiz skipping serve-favicon@~2.3.0
-verbose already installed in /home/andres/Documentos/proy_quiz/quiz skipping body-parser@~1.13.2
-ERR! Error: failed to fetch from registry: express-partials
-ERR!     at /usr/share/npm/lib/utils/npm-registry-client/get.js:139:12
-ERR!     at cb (/usr/share/npm/lib/utils/npm-registry-client/request.js:31:9)
-ERR!     at Request._callback (/usr/share/npm/lib/utils/npm-registry-client/request.js:136:18)
-ERR!     at Request.callback (/usr/lib/nodejs/request/main.js:119:22)
-ERR!     at Request.<anonymous> (/usr/lib/nodejs/request/main.js:212:58)
-ERR!     at Request.emit (events.js:88:20)
-ERR!     at ClientRequest.<anonymous> (/usr/lib/nodejs/request/main.js:412:12)
-ERR!     at ClientRequest.emit (events.js:67:17)
-ERR!     at HTTPParser.onIncoming (http.js:1261:11)
-ERR!     at HTTPParser.onHeadersComplete (http.js:102:31)
-ERR! You may report this log at:
-ERR!     <http://bugs.debian.org/npm>
-ERR! or use
-ERR!     reportbug --attach /home/andres/Documentos/proy_quiz/quiz/npm-debug.log npm
-ERR! 
-ERR! System Linux 3.13.0-32-generic
-ERR! command "node" "/usr/bin/npm" "install"
-ERR! cwd /home/andres/Documentos/proy_quiz/quiz
-ERR! node -v v0.6.12
-ERR! npm -v 1.1.4
-ERR! message failed to fetch from registry: express-partials
-verbose exit [ 1, true ]
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/n/versions/node/0.12.4/bin/node',
+1 verbose cli   '/usr/local/n/versions/node/0.12.4/bin/npm',
+1 verbose cli   'start' ]
+2 info using npm@2.10.1
+3 info using node@v0.12.4
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart quiz@0.0.0
+6 info start quiz@0.0.0
+7 verbose unsafe-perm in lifecycle true
+8 info quiz@0.0.0 Failed to exec start script
+9 verbose stack Error: quiz@0.0.0 start: `node ./bin/www`
+9 verbose stack Exit status 1
+9 verbose stack     at EventEmitter.<anonymous> (/usr/local/n/versions/node/0.12.4/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
+9 verbose stack     at EventEmitter.emit (events.js:110:17)
+9 verbose stack     at ChildProcess.<anonymous> (/usr/local/n/versions/node/0.12.4/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+9 verbose stack     at ChildProcess.emit (events.js:110:17)
+9 verbose stack     at maybeClose (child_process.js:1015:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
+10 verbose pkgid quiz@0.0.0
+11 verbose cwd /home/andres/Documentos/proy_quiz/quiz
+12 error Linux 3.13.0-32-generic
+13 error argv "/usr/local/n/versions/node/0.12.4/bin/node" "/usr/local/n/versions/node/0.12.4/bin/npm" "start"
+14 error node v0.12.4
+15 error npm  v2.10.1
+16 error code ELIFECYCLE
+17 error quiz@0.0.0 start: `node ./bin/www`
+17 error Exit status 1
+18 error Failed at the quiz@0.0.0 start script 'node ./bin/www'.
+18 error This is most likely a problem with the quiz package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     node ./bin/www
+18 error You can get their info via:
+18 error     npm owner ls quiz
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]
