@@ -19,7 +19,7 @@ module.exports = {
  );
  },
 
- down: function (queryInterface, Sequelize) { //Define como deshacer los cambios en la BBDD return queryInterface.dropTable('Quizzes');
+ down: function (queryInterface, Sequelize) {  return queryInterface.dropTable('Quizes');
  }
 
-+};
+};

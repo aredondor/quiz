@@ -3,7 +3,7 @@ var models = require('../models');
 var Sequelize = require('sequelize');
 
 exports.load = function(req, res, next, quizId) {
-models.Quiz.findById(quizId)
+models.Quiz.findById(quizId, {include: [models.Comment]})
 .then(function(quiz) {
 if (quiz) {
 req.quiz = quiz;
@@ -157,15 +157,12 @@ exports.update = function(req, res, next) {
  });
 };
 
- // DELETE /quizzes/:id
+// DELETE /quizzes/:id
 exports.destroy = function(req, res, next) {
- req.quiz.destroy()
- .then( function() {
+ req.quiz.destroy().then(function() {
  req.flash('success', 'Quiz borrado con éxito.');
- res.redirect('/quizzes');
- })
- .catch(function(error){
- req.flash('error', 'Error al editar el Quiz: '+error.message);
- next(error);
+ res.redirect('/quizes');
+ }).catch(function(error) {
+ req.flash('error', 'Error al editar el Quiz: ' + error.message);
  });
 };
