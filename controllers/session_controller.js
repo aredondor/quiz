@@ -1,6 +1,7 @@
 var models = require('../models');
 var Sequelize = require('sequelize');
 var url = require('url');
+//var timeout = 30000;
 /*
 * Autenticar un usuario: Comprueba si el usuario esta registrado en users
 *
@@ -36,7 +37,8 @@ exports.create = function(req, res, next) {
 			if (user) {
 // Crear req.session.user y guardar campos id y username
 // La sesión se define por la existencia de: req.session.user
-				req.session.user = {id:user.id, username:user.username};
+				//var logout_time = Date.now() + timeout;
+				req.session.user = {id:user.id, username:user.username, expires: Date.now()};
 				res.redirect(redir); // redirección a redir
 			} else {
 				req.flash('error', 'La autenticación ha fallado. Reinténtelo otra vez.');
@@ -48,8 +50,22 @@ exports.create = function(req, res, next) {
 			next(error);
 	});
 };
+
+// exports.autologout = function(req, res, next){
+// 	if(req.session) {
+// 		if(req.session.user.logout_time >= Date.now()){
+// 			req.session.user.logout_time = Date.now() + timeout;
+// 		} else {
+// 			delete req.session.user;
+// 			res.redirect("/session");
+//  		}
+//  	}
+// 	next();
+// };
+
 // DELETE /session -- Destruir sesion
 exports.destroy = function(req, res, next) {
 	delete req.session.user;
 	res.redirect("/session"); // redirect a login
 };
+

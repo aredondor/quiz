@@ -8,6 +8,7 @@ var session = require('express-session');
 var partials = require('express-partials');
 var flash = require('express-flash');
 var methodOverride = require('method-override');
+var sessionController = require('./controllers/session_controller');
 
 var routes = require('./routes/index');
 
@@ -40,6 +41,7 @@ app.use(function(req, res, next) {
 });
 
 app.use('/', routes);
+//app.use(sessionController.autologout);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
@@ -69,6 +71,19 @@ app.use(function(err, req, res, next) {
     message: err.message,
     error: {}
   });
+});
+
+app.use(function(req, res, next) {
+  if(req.session.user){
+    if((Date.now() - req.session.user.expires) < 30000){
+      req.session.user.expires = Date.now();
+    } else {
+      delete req.session.user;
+      req.flash('error', 'La sesión ha expirado.');
+    }
+ }
+
+  next();
 });
 
 
