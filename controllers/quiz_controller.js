@@ -42,23 +42,26 @@ next(error);
 };
 // GET /quizzes/:id
 exports.show = function(req, res, next) {
-var quiz = req.quiz;
-if(quiz){
-if (req.params.format === 'json') {
-var texto_div = JSON.stringify(quiz).split(',');
-var texto = '';
-for (var i in texto_div){
-texto += texto_div[i] + '<br>';
-}
-res.send (texto);
-} else {
-var answer = req.query.answer || '';
-res.render('quizzes/show', {quiz: quiz, answer: answer});
-}
-}
-else {
-throw new Error('No hay preguntas en la BBDD');
-}
+	var quiz = req.quiz;
+	if(quiz){
+		if (req.params.format === 'json') {
+			var texto_div = JSON.stringify(quiz).split(',');
+			var texto = '';
+			for (var i in texto_div){
+				texto += texto_div[i] + '<br>';
+			}
+			res.send (texto);
+		} else {
+			var answer = req.query.answer || '';
+			models.User.findAll({order: ['username']}).then(function(users){
+				res.render('quizzes/show', {quiz: quiz, answer: answer, users: users});	
+			});
+			
+		}
+	}
+	else {
+		throw new Error('No hay preguntas en la BBDD');
+	}
 };
 // GET /quizzes/:id/check
 exports.check = function(req, res) {
