@@ -9,9 +9,11 @@ router.get('/', function(req, res, next) {
 res.render('index');
 });
 
-//Autoload de rutas que usen :quizId
-router.param('quizId', quizController.load);
-router.param('userId', userController.load);
+//Autoload de parametros
+router.param('quizId', 		quizController.load);
+router.param('userId', 		userController.load);
+router.param('commentId', 	commentController.load);
+
 // Definición de rutas de /quizzes
 //router.get('/quizzes', quizController.index);
 //router.get('/quizzes/:quizId(\\d+)', quizController.show);
@@ -25,8 +27,11 @@ router.get('/quizzes/:quizId(\\d+)/edit', 		sessionController.loginRequired, qui
 router.put('/quizzes/:quizId(\\d+)', 			sessionController.loginRequired, quizController.update);
 router.delete('/quizzes/:quizId(\\d+)', 		sessionController.loginRequired, quizController.destroy);
 
+// Definicion de rutas de comentarios
 router.get('/quizzes/:quizId(\\d+)/comments/new', 	sessionController.loginRequired, commentController.new);
 router.post('/quizzes/:quizId(\\d+)/comments', 		sessionController.loginRequired, commentController.create);
+router.put('/quizzes/:quizId(\\d+)/comments/:commentId(\\d+)/accept', 		sessionController.loginRequired, 
+																			commentController.accept);
 
 // Definición de rutas de cuenta
 router.get('/users', 							userController.index); // listado usuarios
