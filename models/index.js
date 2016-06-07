@@ -8,12 +8,13 @@ var Sequelize = require('sequelize');
 // DATABASE_URL = postgres://user:passwd@ohst:port/database
 var url, storage
 if(!process.env.DATABASE_URL){
-url = 'sqlite:///';
-storage = 'quiz.sqlite';
+		url = 'sqlite:///';
+		storage = 'quiz.sqlite';
 } else {
-url = process.env.DATABASE_URL;
-storage = process.env.DATABASE_STORAGE || "";
+		url = process.env.DATABASE_URL;
+		storage = process.env.DATABASE_STORAGE || "";
 }
+
 var sequelize = new Sequelize(url,{storage: storage,omitNull: true});
 //Importar la definicion de la tabla quiz de quiz.js
 var Quiz = sequelize.import(path.join(__dirname,'quiz'));

@@ -17,26 +17,26 @@ throw new Error('No existe quizId=' + quizId);
 
 // GET /quizzes
 exports.index = function(req, res, next) {
-models.Quiz.findAll({where: {question: {$like: "%" + req.query.search + "%"}}})
-.then(function(quizzes) {
+	models.Quiz.findAll({where: {question: {$like: "%" + req.query.search + "%"}}})
+		.then(function(quizzes) {
 //res.render('quizzes/index.ejs', { quizzes: quizzes});
-if(req.params.format === 'json') {
- var texto_div = JSON.stringify(quizzes).split(',');
- var texto = '';
- for(var i in texto_div) {
- if(texto_div[i].match(/^{/)) {
- texto += '<br>';
- }
- texto += texto_div[i] + '<br>';
- }
- res.send(texto);
- } else {
- res.render('quizzes/index.ejs', {quizzes: quizzes});
- }
-})
-.catch(function(error) {
-next(error);
-});
+			if(req.params.format === 'json') {
+ 				var texto_div = JSON.stringify(quizzes).split(',');
+ 				var texto = '';
+ 				for(var i in texto_div) {
+ 					if(texto_div[i].match(/^{/)) {
+						 texto += '<br>';
+ 					}
+ 					texto += texto_div[i] + '<br>';
+ 				}
+ 				res.send(texto);
+ 			} else {
+ 				res.render('quizzes/index.ejs', {quizzes: quizzes});
+ 			}
+		})
+		.catch(function(error) {
+			next(error);
+		});
 };
 // GET /quizzes/:id
 exports.show = function(req, res, next) {
