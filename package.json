@@ -3,13 +3,12 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
- "start": "node ./bin/www",
- "migrate_local": "./node_modules/.bin/sequelize db:migrate --url sqlite://$(pwd)/quiz.sqlite",
-  "seed_local": "./node_modules/.bin/sequelize db:seed:all --url sqlite://$(pwd)/quiz.sqlite",
-
- "migrate_heroku": "heroku run ./node_modules/.bin/sequelize db:migrate --url postgres://ytgmomjharvtee:yxA41u8-trprAEzcByVv0AluKO@ec2-54-235-255-27.compute-1.amazonaws.com:5432/d49ajmh3312k9",
- "seed_heroku": "heroku run ./node_modules/.bin/sequelize db:seed:all --url postgres://ytgmomjharvtee:yxA41u8-trprAEzcByVv0AluKO@ec2-54-235-255-27.compute-1.amazonaws.com:5432/d49ajmh3312k9",
- "reset_heroku": "heroku pg:reset DATABASE"
+    "start": "node ./bin/www",
+    "migrate_local": "./node_modules/.bin/sequelize db:migrate --url sqlite://$(pwd)/quiz.sqlite",
+    "seed_local": "./node_modules/.bin/sequelize db:seed:all --url sqlite://$(pwd)/quiz.sqlite",
+    "migrate_heroku": "heroku run ./node_modules/.bin/sequelize db:migrate --url postgres://ytgmomjharvtee:yxA41u8-trprAEzcByVv0AluKO@ec2-54-235-255-27.compute-1.amazonaws.com:5432/d49ajmh3312k9",
+    "seed_heroku": "heroku run ./node_modules/.bin/sequelize db:seed:all --url postgres://ytgmomjharvtee:yxA41u8-trprAEzcByVv0AluKO@ec2-54-235-255-27.compute-1.amazonaws.com:5432/d49ajmh3312k9",
+    "reset_heroku": "heroku pg:reset DATABASE"
   },
   "engines": {
     "node": "4.2.x",
@@ -17,6 +16,7 @@
   },
   "dependencies": {
     "body-parser": "~1.13.2",
+    "cloudinary": "^1.3.1",
     "cookie-parser": "~1.3.5",
     "debug": "~2.2.0",
     "ejs": "~2.3.3",
@@ -26,6 +26,7 @@
     "express-session": "^1.13.0",
     "method-override": "^2.3.5",
     "morgan": "~1.6.1",
+    "multer": "^1.1.0",
     "pg": "^4.4.6",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.19.3",
